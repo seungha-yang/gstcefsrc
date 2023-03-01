@@ -564,6 +564,7 @@ void quit_message_loop (int arg)
   CefQuitMessageLoop();
 }
 
+#if 0
 class ShutdownEnforcer {
  public:
   ~ShutdownEnforcer() {
@@ -578,6 +579,7 @@ class ShutdownEnforcer {
     g_mutex_unlock (&init_lock);
   }
 } shutdown_enforcer;
+#endif
 
 static gpointer
 init_cef (gpointer src)
